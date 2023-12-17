@@ -43,11 +43,11 @@ export default function RootLayout({
         <title>Ayush Mondal Repository</title>
       </head>
       <body className={inter.className}>
-        <div className="flex w-full h-full bg-neutral-800">
-          <section className="basis-1/3">
+        <div className="md:flex w-full h-full bg-neutral-800">
+          <section className="md:basis-1/3">
             <SideNavbar />
           </section>
-          <section className="basis-2/3">
+          <section className="md:basis-2/3">
             <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-backup">
               {children}
             </main>
