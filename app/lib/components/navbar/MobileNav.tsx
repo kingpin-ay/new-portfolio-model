@@ -12,7 +12,7 @@ import {
 } from "../../animation/navbarVariants";
 
 const MobileNav = () => {
-  const [isNavOpen, setIsNavOpen] = useState(true);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
 
   return (
