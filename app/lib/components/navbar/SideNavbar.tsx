@@ -32,8 +32,8 @@ const SideNavbar = () => {
             Content On this Website
           </p>
           <div className="flex flex-col justify-between text-extraDark ps-1 gap-3">
-            {routeCollection.map((eachRoute) => (
-              <Link href={eachRoute.address}>
+            {routeCollection.map((eachRoute, index) => (
+              <Link href={eachRoute.address} key={index}>
                 <motion.div
                   whileHover={
                     eachRoute.address === pathname

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Route, routeCollection } from "../../data/route";
 import { IonIcon } from "@ionic/react";
@@ -19,10 +19,8 @@ const MobileNav = () => {
     <>
       {!isNavOpen && (
         <div
-          className="fixed right-12 top-12 md:hidden text-neutral-50"
-          onClick={() => {
-            setIsNavOpen(true);
-          }}
+          className="fixed right-12 top-12 md:hidden text-neutral-50 z-50"
+          onClick={() => setIsNavOpen(true)}
         >
           Open
         </div>
@@ -34,17 +32,11 @@ const MobileNav = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="w-full h-full flex flex-col justify-between absolute origin-top bg-main backdrop-blur-md md:hidden text-neutral-50 p-8"
+            className="w-full h-full flex flex-col justify-between absolute origin-top bg-main backdrop-blur-md md:hidden text-neutral-50 p-8 z-50"
           >
             <motion.div className="flex justify-between p-4 items-center">
               <motion.p className="font-bold text-lg">Ayush</motion.p>
-              <motion.p
-                onClick={() => {
-                  setIsNavOpen(false);
-                }}
-              >
-                Close
-              </motion.p>
+              <motion.p onClick={() => setIsNavOpen(false)}>Close</motion.p>
             </motion.div>
             <motion.div
               variants={linkContainerAnimationVariants}
@@ -54,14 +46,12 @@ const MobileNav = () => {
               className="flex flex-col justify-between items-center gap-4"
             >
               {routeCollection.map((eachRoute, index) => (
-                <div className="overflow-hidden">
+                <div className="overflow-hidden" key={index}>
                   <LinkRender
                     key={index}
                     eachRoute={eachRoute}
                     pathName={pathname}
-                    closeTab={() => {
-                      setIsNavOpen(false);
-                    }}
+                    closeTab={() => setIsNavOpen(false)}
                   />
                 </div>
               ))}

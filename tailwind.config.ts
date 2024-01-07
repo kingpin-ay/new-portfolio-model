@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     colors: {
       main: "#092635",
-      backup: "#1B4242",
+      backup: "#000",
       extraDark: "#5C8374",
       extraLight: "#9EC8B9",
     },
