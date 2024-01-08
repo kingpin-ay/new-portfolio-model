@@ -6,6 +6,7 @@ import {
   people,
   hammer,
 } from "ionicons/icons";
+import { Route } from "../types/RouteTypes";
 
 export const routeCollection: Route[] = [
   {
@@ -39,9 +40,3 @@ export const routeCollection: Route[] = [
     iconText: people,
   },
 ];
-
-export interface Route {
-  name: string;
-  address: string;
-  iconText: string;
-}
