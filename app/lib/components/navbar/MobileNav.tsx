@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Route, routeCollection } from "../../data/route";
+import { routeCollection } from "../../data/route";
 import { IonIcon } from "@ionic/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,6 +10,7 @@ import {
   linkContainerAnimationVariants,
   navScreenVariant,
 } from "../../animation/navbarVariants";
+import { Route } from "../../types/RouteTypes";
 
 const MobileNav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
