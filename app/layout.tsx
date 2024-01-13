@@ -48,7 +48,7 @@ export default function RootLayout({
             <SideNavbar />
           </section>
           <section className="md:basis-2/3">
-            <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-backup">
+            <main className="flex min-h-screen flex-col items-center justify-between pt-20 md:p-24 bg-backup">
               {children}
             </main>
           </section>
