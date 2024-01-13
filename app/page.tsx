@@ -1,6 +1,8 @@
 "use client";
 import Earth from "./lib/components/threeDObject/Earth";
 import CanvasRenderer from "./lib/components/threeDObject/CanvasRenderer";
+import Reveal from "./lib/animation/component/Reveal";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,20 +15,26 @@ export default function Home() {
         <div className="hero">
           <div className="hero-content text-center">
             <div className="max-w-md">
-              <h1 className="text-5xl font-bold">
-                Welcome to my digital realm!
-              </h1>
-              <p className="py-6">
-                I'm{" "}
-                <span className="font-bold text-base-100 underline underline-offset-2">
-                  Ayush Mondal
-                </span>
-                —an ardent developer on a mission to turn innovative ideas into
-                powerful, secure solutions. Specializing in Rust, TypeScript,
-                Next.js, and Cryptography. Fascinated by the possibilities of
-                blockchain.
-              </p>
-              <button className="btn btn-primary">Explore</button>
+              <Reveal>
+                <h1 className="text-5xl font-bold">
+                  Welcome to my digital realm!
+                </h1>
+              </Reveal>
+              <Reveal>
+                <p className="py-6">
+                  I'm{" "}
+                  <span className="font-bold text-base-100 underline underline-offset-2">
+                    Ayush Mondal
+                  </span>
+                  —an ardent developer on a mission to turn innovative ideas
+                  into powerful, secure solutions. Specializing in Rust,
+                  TypeScript, Next.js, and Cryptography. Fascinated by the
+                  possibilities of blockchain.
+                </p>
+                <button className="btn btn-primary">
+                  <Link href={"/routes/techs"}>Explore</Link>
+                </button>
+              </Reveal>
             </div>
           </div>
         </div>
