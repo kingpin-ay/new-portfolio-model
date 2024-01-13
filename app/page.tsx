@@ -22,7 +22,7 @@ export default function Home() {
               </Reveal>
               <Reveal>
                 <p className="py-6">
-                  I'm{" "}
+                  I&apos;m{" "}
                   <span className="font-bold text-base-100 underline underline-offset-2">
                     Ayush Mondal
                   </span>
