@@ -52,3 +52,10 @@ export const linkAppearAnimationVariant = {
   },
   exit: {},
 };
+
+export const revealAnimationVariant = {
+  hidden: { opacity: 0, y: 75 },
+  visible: { opacity: 1, y: 0 },
+  sliderHidden: { left: 0 },
+  sliderVisible: { left: "100%" },
+};
